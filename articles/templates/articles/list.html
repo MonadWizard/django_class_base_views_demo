@@ -5,7 +5,17 @@
 
     <h1>  Available Articles </h1>
 
-    {{now}}
+    {% if now %}
+        {{now}}
+
+    {% else %}
+        <p> Date-Time not Available </p>
+    
+    {% endif %}
+
+    <br>
+    
+    {{message}}
 
 {% endblock %}
 

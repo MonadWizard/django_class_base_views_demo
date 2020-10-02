@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views import View   # for classBaseView
+from django.views.generic import TemplateView  # for templateView
 
 from datetime import datetime  # for take date-time
 
@@ -13,7 +14,7 @@ def article_list_view(request):
 
 
 
-# work same with class Base views
+# work same with basic class base views
 class ArticleListView(View):
 
     # for handel get request
@@ -27,3 +28,15 @@ class ArticleListView(View):
         pass 
 # right now we have nothing to handel as POST request so, we just pass it.
 
+
+# work with template base views 
+class MyTemplateView(TemplateView):
+    template_name = 'articles/list.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['now'] = datetime.now()
+        context['message'] = 'any kind of message you can be passed...'
+        return context
+# if we have static template & we don't need to pass any aditional data then 
+# we jusy diclar template on urls.py  no need any class or function
