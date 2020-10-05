@@ -1,8 +1,8 @@
-here we see demo of Form base Views.
+here we see demo of List base Views.
 
-with inherited by FormView class
+with compare to generic View and TemplateView
 
-also define if form succes then reverse url and print data from form.
+also define filter to see specific data.
 
 
 

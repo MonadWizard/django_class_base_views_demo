@@ -3,9 +3,52 @@
 
 {% block content %}
 
-    <h1>  Available Articles </h1>
+    <h1>  Available Articles 1 </h1>
+
+    <ul class="list-group list-group-flush">
+        <!-- for ListView we can use object_list or modelname_list -->
+        {% for article in article_list %}
+
+            <li class="list-group-item" >
+                {{ forloop.counter }} - {{ article.title }}
+                
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h1>  Available Articles 2 </h1>
+
+
+
+    <ul class="list-group list-group-flush">
+        <!-- for ListView we can use object_list or modelname_list -->
+        {% for article in object_list %}
+
+            <li class="list-group-item" >
+                {{ forloop.counter }} - {{ article.title }}
+                
+            </li>
+        {% endfor %}
+    </ul>
+
+
+    <h1>  Available Articles 3  </h1>
+
+
+
+    <ul class="list-group list-group-flush">
+        <!-- for ListView we can use context_object_name -->
+        {% for article in articles %}
+
+            <li class="list-group-item" >
+                {{ forloop.counter }} - {{ article.title }}
+                
+            </li>
+        {% endfor %}
+    </ul>
+
+
+
 
 {% endblock %}
-
-
 

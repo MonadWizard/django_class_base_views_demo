@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class Base View</title>
+    
+    {% if page_title %}
+    <title>{{ page_title }}</title>
+    {% else %}
+    <title> Class Base View </title>
+    {% endif %}
+
 </head>
 <body>
 
