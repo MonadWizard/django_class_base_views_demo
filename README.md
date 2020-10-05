@@ -1,5 +1,16 @@
-here we see demo of Template base Views.
+here we see demo of Form base Views.
 
-with inherited by Template class
+with inherited by FormView class
 
-also define static template on only urls.py
+also define if form succes then reverse url and print data from form.
+
+
+
+
+
+
+
+
+
+
+

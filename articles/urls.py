@@ -1,21 +1,14 @@
 from django.urls import path
+from django.views.generic import TemplateView  # for templateView
 
 from . import views
 
-app_name = 'articles'
+app_name = 'articles'  # use for get_success method
 
 
 urlpatterns = [
-
-    path('',views.article_list_view ),
-    path('cbv/',views.ArticleListView.as_view() ),
-    path('cbv_t/',views.MyTemplateView.as_view() ),
-    
+    path('',TemplateView.as_view(template_name = 'articles/list.html'), name='list'),
+    path('c/',views.ArticleFormView.as_view(), name='creat' ),    
 ]
 
 
-
-# for static template we just only define it...
-from django.views.generic import TemplateView  # for templateView
-
-urlpatterns += [path('cbv_tt/',TemplateView.as_view(template_name = 'articles/list.html') )]
