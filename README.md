@@ -1,8 +1,9 @@
-here we see demo of List base Views.
+here we see demo of Mixin and DetailView.
 
-with compare to generic View and TemplateView
+create mixin class for take specific data and display to list with ListView
 
-also define filter to see specific data.
+then create another mixin to dynamic title for every data details view with DetailView
+
 
 
 

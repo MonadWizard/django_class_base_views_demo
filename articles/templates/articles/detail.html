@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1> {{ object.title }} </h1>
+
+<p>Posted on: {{ object.create_date }}</p>
+
+<br>
+
+<p>{{ object.body }}</p>
+
+<button class="btn">
+    <a href="{% url 'articles:list' %}"> Go back to article list </a>
+</button>
+
+
+
+
+{% endblock %}
+
